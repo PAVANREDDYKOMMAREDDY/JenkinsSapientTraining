@@ -6,7 +6,7 @@ pipeline {
 
             steps {
                 withMaven(maven : 'Maven 3.6.3') {
-		    sh 'cd ./Day3'
+		    
                     sh 'mvn clean install'
                 }
             }
