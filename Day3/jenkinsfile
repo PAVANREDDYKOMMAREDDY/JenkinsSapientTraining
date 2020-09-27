@@ -5,6 +5,12 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {
+
+		sh "$PWD"
+          	dir('Day3'){
+            		sh "$PWD"
+         	}
+          sh "$PWD"
                 withMaven(maven : 'Maven 3.6.3') {
 		    
                     sh 'mvn clean install'
